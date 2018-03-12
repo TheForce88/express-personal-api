@@ -13,3 +13,21 @@
 //   console.log("Created new campsite", campsite._id)
 //   process.exit(); // we're all done! Exit the program.
 // })
+ var db = require('./models');
+ var new_project = {
+   name: "Monument",
+   description: "mock blog page",
+   githubRepoUrl: "https://github.com/TheForce88/monument",
+   deployedUrl: "https://github.com/TheForce88/monument",
+   Screenshot: ""
+ };
+
+ db.Project.remove({}, function(err, books) {
+   if(err) {
+     console.log('Error occured in remove', err);
+   } else {
+     console.log('remove all books');
+
+     db.Project.create()
+   }
+ })
